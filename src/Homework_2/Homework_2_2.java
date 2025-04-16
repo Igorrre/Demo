@@ -14,6 +14,7 @@ public class Homework_2_2 {
             System.out.println("Normal");
         } else if (t >= -20) {
             System.out.println("Cold");
+            scanner.close();
         }
     }
 }
