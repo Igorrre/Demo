@@ -6,15 +6,18 @@ public class Homework_2_2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ввведите температуру на улице t =  ");
-        int t = scanner.nextInt();
-        if (t > -5) {
-            System.out.println("Warm");
-        } else if (t <= -5 && t > -20) {
-            System.out.println("Normal");
-        } else if (t >= -20) {
-            System.out.println("Cold");
-            scanner.close();
-        }
+        System.out.print("Ввведите температуру на улице t =  ");
+        if (scanner.hasNextInt()) {
+            int t = scanner.nextInt();
+            if (t > -5) {
+                System.out.println("Warm");
+            } else if (t <= -5 && t > -20) {
+                System.out.println("Normal");
+            } else if (t >= -20) {
+                System.out.println("Cold");
+                scanner.close();
+            }
+        } else
+            System.out.println("Введитие число, а не букву");
     }
 }
